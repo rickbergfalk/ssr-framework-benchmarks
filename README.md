@@ -1,6 +1,18 @@
 # ssr-framework-benchmarks
 
-SSR benchmarks for Nuxt, Next, and similar
+SSR benchmarks for Next, Nuxt, Sapper, and ???
+
+Will probably add some old school EJS and Mustache to get an idea how these line up.
+
+## The setup
+
+Each project has an index page that renders 100 widget components with titles, descriptions, and 9 tags, all as sub components. Each framework might have a bit of extra CSS and stuff. I wanted to see what looping through data and a few components would amount to.
+
+Setups are mostly stock templates (whatever Nuxt/Next/Sapper starts you out with).
+
+Each setup _should_ utilize SSR. No fetching is performed for SSR to keep things consistent.
+
+Eventually might add more components, clean things up, etc. Might be nice to have consistent content served, but I don't know that it matters that much.
 
 ## Benchmarks
 
