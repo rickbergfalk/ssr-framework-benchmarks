@@ -1,0 +1,34 @@
+{
+  "name": "marko-fastify",
+  "version": "1.0.0",
+  "description": "Sample Fastify-based server app that integrates the marko module for rendering a view",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marko-js-samples/marko-fastify.git"
+  },
+  "keywords": [
+    "marko",
+    "fastify"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marko-js-samples/marko-fastify/issues"
+  },
+  "homepage": "https://github.com/marko-js-samples/marko-fastify#readme",
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.15",
+    "cross-env": "^7.0.3",
+    "fastify": "^3.9.1",
+    "fastify-static": "^3.3.0",
+    "lasso": "^3.4.0",
+    "lasso-marko": "^2.3.0",
+    "marko": "^4.4.28",
+    "point-of-view": "^4.7.0"
+  }
+}

@@ -1,0 +1,35 @@
+class {
+  onCreate() {
+    this.state = {
+      tags: [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine"
+      ]
+    };
+  }
+}
+
+style {
+  .card {
+    width: 300px;
+    min-height: 300px;
+    border: 2px solid magenta;
+  }
+}
+
+<div class="card">
+  <widget-card-title>${input.title}</widget-card-title>
+  <widget-card-description>${input.description}</widget-card-description>
+  <if(state.tags.length)>
+    <for|tag, index| of=state.tags>
+      <widget-card-tag>${tag}</widget-card-tag>
+    </for>
+  </if>
+</div>

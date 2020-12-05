@@ -1,18 +1,20 @@
 # ssr-framework-benchmarks
 
-SSR benchmarks for Next, Nuxt, Sapper, and ???
+Server-side-rendering (SSR) benchmarks for Next, Nuxt, Sapper, Marko, and ???
 
 Will probably add some old school EJS and Mustache to get an idea how these line up.
 
 ## The setup
 
-Each project has an index page that renders 100 widget components with titles, descriptions, and 9 tags, all as sub components. Each framework might have a bit of extra CSS and stuff. I wanted to see what looping through data and a few components would amount to.
+Each project has an index page that renders 100 widget components with titles, descriptions, and 9 tags, all as sub components. This is in an effort to benchmark some of the component lifecycle/rendering overhead in a server environment.
 
 Setups are mostly stock templates (whatever Nuxt/Next/Sapper starts you out with).
 
-Each setup _should_ utilize SSR. No fetching is performed for SSR to keep things consistent.
+Each setup should utilize SSR. No fetching/async actions performed to keep things consistent.
 
 Eventually might add more components, clean things up, etc. Might be nice to have consistent content served, but I don't know that it matters that much.
+
+PRs welcome.
 
 ## Benchmarks
 
@@ -126,4 +128,40 @@ Percentage of the requests served within a certain time (ms)
   98%      4
   99%      5
  100%      7 (longest request)
+```
+
+## Marko (using Fastify)
+
+```
+Document Path:          /
+Document Length:        57285 bytes
+
+Concurrency Level:      1
+Time taken for tests:   2.796 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      57423000 bytes
+HTML transferred:       57285000 bytes
+Requests per second:    357.68 [#/sec] (mean)
+Time per request:       2.796 [ms] (mean)
+Time per request:       2.796 [ms] (mean, across all concurrent requests)
+Transfer rate:          20057.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     2    3   1.2      2      11
+Waiting:        1    3   1.2      2      11
+Total:          2    3   1.2      2      11
+
+Percentage of the requests served within a certain time (ms)
+  50%      2
+  66%      3
+  75%      4
+  80%      4
+  90%      4
+  95%      5
+  98%      6
+  99%      7
+ 100%     11 (longest request)
 ```

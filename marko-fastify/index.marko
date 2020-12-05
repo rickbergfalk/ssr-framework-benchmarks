@@ -1,0 +1,41 @@
+style {
+  .container {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+}
+
+<lasso-page/>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>marko-fastify</title>
+    <lasso-head/>
+  </head>
+  <body class="container">
+    <div>
+      <app-hello name=data.name/>
+      <h1>Marko Widget Store</h1>
+      <div class="cards">
+        <if(data.widgets.length)>
+          <!-- widget is a reserved marko word/variable turns out  -->
+          <for|wdg, index| of=data.widgets>
+            <widget-card title=wdg.title description=wdg.description/>
+          </for>
+        </if>
+      </div>
+      <lasso-body/>
+    </div>
+  </body>
+</html>
