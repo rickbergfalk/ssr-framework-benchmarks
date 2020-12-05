@@ -5,7 +5,7 @@ SSR benchmarks for Nuxt, Next, and similar
 ## Benchmarks
 
 ```sh
-ab -n 1000 http://localhost:3000
+ab -n 1000 http://localhost:3000/
 ```
 
 ## Next
@@ -78,4 +78,40 @@ Percentage of the requests served within a certain time (ms)
   98%     33
   99%     37
  100%    117 (longest request)
+```
+
+## Sapper
+
+```
+Document Path:          /
+Document Length:        34609 bytes
+
+Concurrency Level:      1
+Time taken for tests:   1.987 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      35041000 bytes
+HTML transferred:       34609000 bytes
+Requests per second:    503.27 [#/sec] (mean)
+Time per request:       1.987 [ms] (mean)
+Time per request:       1.987 [ms] (mean, across all concurrent requests)
+Transfer rate:          17221.75 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     1    2   0.7      2       6
+Waiting:        1    2   0.6      2       6
+Total:          1    2   0.7      2       7
+
+Percentage of the requests served within a certain time (ms)
+  50%      2
+  66%      2
+  75%      2
+  80%      2
+  90%      3
+  95%      3
+  98%      4
+  99%      5
+ 100%      7 (longest request)
 ```
