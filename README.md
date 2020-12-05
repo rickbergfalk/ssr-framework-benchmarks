@@ -18,6 +18,8 @@ PRs welcome.
 
 ## Benchmarks
 
+From laptop plugged in. Core i7-1065G7 @ 1.50GHz
+
 ```sh
 ab -n 1000 http://localhost:3000/
 ```
@@ -137,31 +139,31 @@ Document Path:          /
 Document Length:        57285 bytes
 
 Concurrency Level:      1
-Time taken for tests:   2.796 seconds
+Time taken for tests:   2.007 seconds
 Complete requests:      1000
 Failed requests:        0
 Total transferred:      57423000 bytes
 HTML transferred:       57285000 bytes
-Requests per second:    357.68 [#/sec] (mean)
-Time per request:       2.796 [ms] (mean)
-Time per request:       2.796 [ms] (mean, across all concurrent requests)
-Transfer rate:          20057.42 [Kbytes/sec] received
+Requests per second:    498.20 [#/sec] (mean)
+Time per request:       2.007 [ms] (mean)
+Time per request:       2.007 [ms] (mean, across all concurrent requests)
+Transfer rate:          27937.64 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.0      0       0
-Processing:     2    3   1.2      2      11
-Waiting:        1    3   1.2      2      11
-Total:          2    3   1.2      2      11
+Processing:     1    2   0.9      2      13
+Waiting:        1    2   0.8      2      13
+Total:          1    2   0.9      2      13
 
 Percentage of the requests served within a certain time (ms)
   50%      2
-  66%      3
-  75%      4
-  80%      4
-  90%      4
-  95%      5
-  98%      6
-  99%      7
- 100%     11 (longest request)
+  66%      2
+  75%      2
+  80%      2
+  90%      3
+  95%      4
+  98%      4
+  99%      6
+ 100%     13 (longest request)
 ```
